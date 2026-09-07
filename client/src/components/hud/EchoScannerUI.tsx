@@ -68,7 +68,7 @@ export default function EchoScannerUI() {
                 </span>
               </h2>
               <p className="text-xs text-cyber-muted">
-                ACOUSTIC RADAR ACTIVE // DETECTED ANOMALIES: {echoes.length} // MEMORY BUFFER: {memoryUsed} / {memoryCapacity} MB
+                ACOUSTIC RADAR ACTIVE {'//'} DETECTED ANOMALIES: {echoes.length} {'//'} MEMORY BUFFER: {memoryUsed} / {memoryCapacity} MB
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function EchoScannerUI() {
                   <div>
                     <h3 className="text-sm font-bold text-cyber-text truncate">{echo.creator_name}</h3>
                     <p className="text-[11px] text-cyber-muted">
-                      {echo.forensics?.elapsed_str || `${echo.duration.toFixed(1)}s duration`} // {echo.forensics?.direction || "STATIONARY"}
+                      {echo.forensics?.elapsed_str || `${echo.duration.toFixed(1)}s duration`} {'//'} {echo.forensics?.direction || "STATIONARY"}
                     </p>
                   </div>
 

@@ -191,14 +191,14 @@ export default function MainMenu() {
           <div>
             <div className="flex items-center space-x-2.5">
               <h1 className="text-3xl font-mono font-black tracking-widest text-cyber-text">
-                ECHO<span className="text-cyber-cyan">//</span>SHIFT
+                ECHO<span className="text-cyber-cyan">{'//'}</span>SHIFT
               </h1>
               <span className="px-2 py-0.5 text-[10px] font-mono uppercase bg-cyber-cyan/20 text-cyber-cyan rounded border border-cyber-cyan/40 font-bold tracking-wider">
                 2.0 CINEMATIC
               </span>
             </div>
             <p className="text-xs font-mono text-cyber-cyan/70 tracking-widest flex items-center space-x-2">
-              <span>VANTA-9 // 03:17:42</span>
+              <span>VANTA-9 {'//'} 03:17:42</span>
               <span className="text-cyber-muted">—</span>
               <span className="italic text-cyber-text font-semibold">“Every action leaves a memory.”</span>
             </p>
@@ -502,7 +502,7 @@ export default function MainMenu() {
               <div className="space-y-4">
                 <div className="border-b border-cyber-border pb-3">
                   <span className="text-[10px] font-mono text-cyber-cyan uppercase tracking-widest">
-                    {archiveFiles[selectedArchiveFile].id} // {archiveFiles[selectedArchiveFile].tag}
+                    {archiveFiles[selectedArchiveFile].id} {'//'} {archiveFiles[selectedArchiveFile].tag}
                   </span>
                   <h2 className="text-xl font-mono font-black text-cyber-text mt-1">
                     {archiveFiles[selectedArchiveFile].title}
