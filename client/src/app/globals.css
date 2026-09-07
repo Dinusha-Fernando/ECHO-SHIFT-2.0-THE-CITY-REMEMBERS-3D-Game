@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #070a12;
+  --foreground: #eaf6ff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b111e;
+}
+::-webkit-scrollbar-thumb {
+  background: #00e5ff44;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ffaa;
+}
+
+/* Sci-Fi Glassmorphism */
+.glass-panel {
+  background: rgba(16, 22, 37, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(0, 229, 255, 0.05);
+}
+
+.glass-panel-warning {
+  background: rgba(26, 20, 15, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 176, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 176, 0, 0.05);
+}
+
+.glass-panel-danger {
+  background: rgba(30, 10, 18, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 49, 88, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(255, 49, 88, 0.2);
+}
+
+/* Scanlines overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Temporal Shift Chromatic Aberration */
+.shift-vfx {
+  animation: shiftDistort 0.8s ease-in-out forwards;
+}
+
+@keyframes shiftDistort {
+  0% {
+    filter: invert(0) drop-shadow(0 0 0px #00e5ff);
+    transform: scale(1);
+  }
+  30% {
+    filter: invert(0.2) hue-rotate(90deg) drop-shadow(0 0 25px #00e5ff);
+    transform: scale(1.02);
+  }
+  70% {
+    filter: invert(0.1) hue-rotate(-90deg) drop-shadow(0 0 20px #7c4dff);
+    transform: scale(0.99);
+  }
+  100% {
+    filter: invert(0) drop-shadow(0 0 0px #00e5ff);
+    transform: scale(1);
+  }
+}
+
+/* Neon Text Glows */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+}
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(124, 77, 255, 0.8), 0 0 20px rgba(124, 77, 255, 0.4);
+}
+.text-glow-amber {
+  text-shadow: 0 0 10px rgba(255, 176, 0, 0.8), 0 0 20px rgba(255, 176, 0, 0.4);
+}
+.text-glow-danger {
+  text-shadow: 0 0 10px rgba(255, 49, 88, 0.8), 0 0 20px rgba(255, 49, 88, 0.4);
+}

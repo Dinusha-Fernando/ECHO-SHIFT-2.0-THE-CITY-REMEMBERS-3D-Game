@@ -1,0 +1,71 @@
+# =========================
+# Node / Next.js
+# =========================
+
+client/node_modules/
+client/.next/
+client/out/
+
+# Environment files
+client/.env
+client/.env.local
+client/.env.development
+client/.env.production
+!client/.env.example
+
+# =========================
+# Python
+# =========================
+
+server/__pycache__/
+server/*.py[cod]
+server/*$py.class
+
+server/.venv/
+server/venv/
+server/env/
+
+# =========================
+# Python testing
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Environment files
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# Build / temporary files
+# =========================
+
+dist/
+build/
+tmp/
+temp/
